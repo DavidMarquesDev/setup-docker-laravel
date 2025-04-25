@@ -20,7 +20,7 @@ services:
         image: nginx:alpine
         restart: unless-stopped
         ports:
-            - "8989:80"
+            - "9000:80"
         volumes:
             - ./:/var/www
             - ./docker/nginx/:/etc/nginx/conf.d/
@@ -48,7 +48,7 @@ services:
         image: phpmyadmin/phpmyadmin
         restart: unless-stopped
         ports:
-            - "8080:80"
+            - "9001:80"
         environment:
             PMA_HOST: db
             PMA_PORT: 3306
